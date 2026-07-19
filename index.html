@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SnakeIO Arena</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="game-shell">
+      <header class="hud">
+        <div>
+          <h1>SnakeIO Arena</h1>
+          <p>Two-player neon battle. Eat food, grow larger, and outlast your rival.</p>
+        </div>
+        <div class="stats">
+          <div class="pill">P1 <span id="scoreP1">0</span></div>
+          <div class="pill">P2 <span id="scoreP2">0</span></div>
+          <div class="pill">Best <span id="best">0</span></div>
+        </div>
+      </header>
+
+      <div class="board-frame">
+        <canvas id="gameCanvas" width="900" height="620"></canvas>
+        <div id="overlay" class="overlay visible">
+          <h2>Enter the arena</h2>
+          <p>Player 1 uses arrow keys. Player 2 uses WASD. Eat glowing food, wrap around walls, and outgrow your rival.</p>
+          <button id="startButton">Start Game</button>
+        </div>
+      </div>
+
+      <section class="leaderboard">
+        <h3>Leaderboard</h3>
+        <ol id="leaderboardList"></ol>
+      </section>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
